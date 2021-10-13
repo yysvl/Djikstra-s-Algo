@@ -1,1 +1,1 @@
-# Djikstra-s-Algo
+# Djikstra-s Algo
