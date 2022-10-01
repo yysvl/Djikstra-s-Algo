@@ -1,3 +1,4 @@
+
 # Djikstra-s-Algo
 
 # Algorithm
@@ -15,3 +16,14 @@ If the destination node has been marked visited (when planning a route between t
 
 Otherwise, select the unvisited node that is marked with the smallest tentative distance, set it as the new "current node", and go back to step 3.
 When planning a route, it is actually not necessary to wait until the destination node is "visited" as above: the algorithm can stop once the destination node has the smallest tentative distance among all "unvisited" nodes (and thus could be selected as the next "current").
+=======
+# Djikstra-s Algo
+#Algorithm 
+
+1) Create a set sptSet (shortest path tree set) that keeps track of vertices included in the shortest-path tree, i.e., whose minimum distance from the source is calculated and finalized. Initially, this set is empty. 
+
+2) Assign a distance value to all vertices in the input graph. Initialize all distance values as INFINITE. Assign distance value as 0 for the source vertex so that it is picked first. 
+
+3) While sptSet doesn’t include all vertices 
+a) Pick a vertex u which is not there in sptSet and has a minimum distance value. b) Include u to sptSet. c) Update distance value of all adjacent vertices of u. To update the distance values, iterate through all adjacent vertices. For every adjacent vertex v, if the sum of distance value of u (from source) and weight of edge u-v, is less than the distance value of v, then update the distance value of v. 
+
